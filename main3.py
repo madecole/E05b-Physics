@@ -94,3 +94,12 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+# The code below is copied down from his example it probably doesn't belong here just keep it noted in case
+     collisions - a.collides_with)list(self.animal_list)
+    for c in collisions:
+         implement conservation of momentum here
+         pass just does nothing. After you add your code, you can delete what is now on line 56
+        pass
