@@ -39,6 +39,7 @@ class Window(arcade.Window):
             self.animal_sprite.center_y = y
             self.animal_sprite.dx = dx
             self.animal_sprite.dy = dy
+            self.animal_sprite.mass = random.randint(50, 100)
             self.animal_list.append(self.animal_sprite)            
 
     def update(self, delta_time):
@@ -50,6 +51,14 @@ class Window(arcade.Window):
 
             collisions = a.collides_with_list(self.animal_list)
             for c in collisions:
+                tx = a.dx
+                ty = a.dy
+                a.dx = c.dx * (c.mass/a.mass)
+                a.dy = c.dy * (c.mass/a.mass)
+                c.dx = tx * (c.mass/a.mass)
+                c.dy = ty * (c.mass/a.mass)
+                
+                
                 if a.center_x > c.center_x:
                     a.dx = abs(a.dx) * -1
                 if a.center_x < c.center_x:
@@ -94,12 +103,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-# The code below is copied down from his example it probably doesn't belong here just keep it noted in case
-     collisions - a.collides_with)list(self.animal_list)
-    for c in collisions:
-         implement conservation of momentum here
-         pass just does nothing. After you add your code, you can delete what is now on line 56
-        pass

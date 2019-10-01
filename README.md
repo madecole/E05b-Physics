@@ -9,3 +9,4 @@ You will then need to accelerate the balls according to the GRAVITY constant. Yo
 
 *main3.py* implements the worst, most-naive version of collision physics using the built-in sprite collision detection. Assuming all the animal heads have the same mass, adjust lines 53–60 to make the collisions more realistic.
 
+This excercise implements physics based programming to create a more "realistic" response when encountering collisions and gravity. In main.py1 the program illustrates gravity on the balls drawn in the window. In main.py2 the balls are programmed to float around and bounce off the walls if they come into contact with them while being acted upon by gravity. In main.py3 the code attempts to create more realistic collisions among the sprites.
